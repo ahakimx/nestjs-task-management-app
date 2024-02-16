@@ -11,7 +11,7 @@ export class AuthService {
         private userRepository: UserRepository,
     ) {}
 
-    async signUp(authCredentialsDto: AuthCredentialsDto): Promise<User> {
+    async signUp(authCredentialsDto: AuthCredentialsDto): Promise<void> {
         return this.userRepository.createUser(authCredentialsDto);
     }
 }
